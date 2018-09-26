@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello_message">Bonjour!</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="login_name">login name</string>
 </resources>
