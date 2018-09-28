@@ -7,4 +7,7 @@
     <string name="LoginHint">Login Name"</string>
     <string name="Password">Password</string>
     <string name="PasswordHint">Enter Password</string>
+    <string name="RadioButton">RadioButton</string>
+    <string name="CheckBox">CheckBox</string>
+    <string name="Question">What does this do</string>
 </resources>
