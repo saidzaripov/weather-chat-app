@@ -1,33 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".LoginActivity">
-
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Login"/>
-
+        android:text="@string/Login"
+        />
     <EditText
-        android:id="@+id/plain_text_input"
+        android:id="@+id/email_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
         android:hint="@string/LoginHint"
-        android:inputType="text" />
-
+        />
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Password"/>
-
+        android:text="@string/Password"
+        />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         android:hint="@string/PasswordHint"
-        android:inputType="textPassword" />
+        />
+    <Button
+        android:id="@+id/login_button"
+        android:text="@string/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/LoginFlagDesc"
+        android:src="@drawable/flag"
+        />
 
 </LinearLayout>

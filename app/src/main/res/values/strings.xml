@@ -7,4 +7,11 @@
     <string name="LoginHint">Login Name"</string>
     <string name="Password">Password</string>
     <string name="PasswordHint">Enter Password</string>
+
+    <string name="LoginFlagDesc">Flag</string>
+    <string name="Question">What does this do?</string>
+    <string name="dialog_title">Title</string>
+    <string name="dialog_message">Do you want to exit?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 </resources>
