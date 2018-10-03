@@ -63,10 +63,8 @@ public class StartActivity extends Activity {
 
     @Override
     protected void onActivityResult(int requestCode, int responseCode, Intent data){
-        if(requestCode == 50){
+        if(requestCode == 50 && responseCode == Activity.RESULT_OK){
             Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult");
-        }
-        if(responseCode == Activity.RESULT_OK){
             Toast.makeText(this , data.getStringExtra("Response"), Toast.LENGTH_LONG).show();
         }
     }
