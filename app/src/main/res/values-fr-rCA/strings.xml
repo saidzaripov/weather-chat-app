@@ -8,8 +8,11 @@
     <string name="Password">Mot de passe</string>
     <string name="PasswordHint">Entrer le mot de passe</string>
     <string name="RadioButtonText">Bouton Radio</string>
-    <string name="CheckBoxText">Case à cocher</string>
-
+    <string name="CheckBoxText">Case a cocher</string>
+    <string name="ChatButtonText">Demarrer la discussion</string>
+    <string name="TextField">Champ de texte</string>
+    <string name="SendText">Envoyer</string>
+    <string name="textviewTwo">TextView</string>
     <string name="LoginFlagDesc">Indicateur</string>
     <string name="Question">Quest ce que cela fait?</string>
     <string name="dialog_title">Titre </string>

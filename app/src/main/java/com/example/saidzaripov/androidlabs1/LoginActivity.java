@@ -9,64 +9,83 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 
 public class LoginActivity extends Activity {
-    private static String ACTIVITY_NAME = "LoginActivity";
 
-    private SharedPreferences preferences;// = getSharedPreferences("login_preferences", Context.MODE_PRIVATE);
-
-    private Button loginButton;
-    private EditText emailEditText;
+    protected static final String ACTIVITY_NAME = "LoginActivity";
+    TextView emailText;
+    Button loginButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Log.i(ACTIVITY_NAME, "In onCreate()");
+        Log.d(ACTIVITY_NAME, "In onCreate()");
 
-        preferences  = getSharedPreferences("login_preferences", Context.MODE_PRIVATE);
 
+        emailText = findViewById(R.id.email_edit_text);
         loginButton = findViewById(R.id.login_button);
+
+        final SharedPreferences reader = getSharedPreferences("", MODE_PRIVATE);
+        String emailString = reader.getString("DefaultEmail", "email@domain.com");
+        emailText.setText(emailString);
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                preferences.edit().putString("emailAddress",emailEditText.getText().toString()).apply();
-                startActivity(new Intent(LoginActivity.this, StartActivity.class));
+            public void onClick(View view) {
+                final String input = emailText.getText().toString();
+                final SharedPreferences.Editor editor = reader.edit();
+                editor.putString("DefaultEmail", input);
+                editor.apply();
+
+                Intent startIntent = new Intent(LoginActivity.this, StartActivity.class);
+                startActivity(startIntent);
             }
         });
 
-        emailEditText = findViewById(R.id.email_edit_text);
-        emailEditText.setText(preferences.getString("emailAddress","example@domain.com"));
     }
 
-    @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
         Log.i(ACTIVITY_NAME, "In onResume()");
+        getEmail();
     }
 
-    @Override
-    protected void onStart(){
+    protected void onStart() {
         super.onStart();
         Log.i(ACTIVITY_NAME, "In onStart()");
+
     }
 
-    @Override
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         Log.i(ACTIVITY_NAME, "In onPause()");
+        saveEmail();
+
     }
 
-    @Override
-    protected void onStop(){
+    protected void onStop() {
         super.onStop();
         Log.i(ACTIVITY_NAME, "In onStop()");
     }
 
-    @Override
-    protected void onDestroy(){
+    protected void onDestroy() {
         super.onDestroy();
         Log.i(ACTIVITY_NAME, "In onDestroy()");
     }
+
+    private void saveEmail() {
+        String email = emailText.getText().toString();
+        SharedPreferences.Editor editor = getSharedPreferences("app_state", MODE_PRIVATE).edit();
+        editor.putString("Email", email);
+        editor.commit();
+    }
+
+    private void getEmail() {
+        SharedPreferences reader = getSharedPreferences("", MODE_PRIVATE);
+        String emailString = reader.getString("Default Email", emailText.getText().toString());
+        emailText.setText(emailString);
+    }
+
 }
