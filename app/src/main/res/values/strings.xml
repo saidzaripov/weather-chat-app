@@ -7,6 +7,8 @@
     <string name="LoginHint">Login Name"</string>
     <string name="Password">Password</string>
     <string name="PasswordHint">Enter Password</string>
+    <string name="RadioButtonText">Radio Button</string>
+    <string name="CheckBoxText">Check Box</string>
 
     <string name="LoginFlagDesc">Flag</string>
     <string name="Question">What does this do?</string>
