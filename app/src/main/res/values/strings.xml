@@ -13,7 +13,7 @@
     <string name="TextField">Text Field</string>
     <string name="SendText">Send</string>
     <string name="textviewTwo">TextView</string>
-
+    <string name="message_hint">new chat</string>
     <string name="LoginFlagDesc">Flag</string>
     <string name="Question">What does this do?</string>
     <string name="dialog_title">Title</string>
