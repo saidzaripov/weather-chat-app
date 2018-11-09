@@ -20,4 +20,8 @@
     <string name="dialog_message">Do you want to exit?</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+    <string name="current_temp">Current:"</string>
+    <string name="min_temp">Min:</string>
+    <string name="max_temp">Max:</string>
+    <string name="weather_forecast"> Weather Forecast</string>
 </resources>

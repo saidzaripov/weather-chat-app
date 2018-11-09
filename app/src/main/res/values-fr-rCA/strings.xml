@@ -20,4 +20,8 @@
     <string name="ok">OK</string>
     <string name="cancel">Annuler</string>
     <string name="message_hint">Nouveau chat</string>
+    <string name="current_temp">Actuel:"</string>
+    <string name="min_temp">Le minimum:</string>
+    <string name="max_temp">Maximum:</string>
+    <string name="weather_forecast"> Météorologiques</string>
 </resources>
