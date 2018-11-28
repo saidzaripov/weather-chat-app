@@ -5,31 +5,32 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+
+
 public class ChatDatabaseHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "chathelper.db";
-    private static final int VERSION_NUM = 7;
+    public  static final String DATABASE_NAME="Chats.db";
+    public static final int VERSION_NUM=3;
+    public static final String KEY_ID="ID";
+    public static final String KEY_MESSAGE="MESSAGE";
+    public static final String TABLE_NAME="CHAT_TABLE";
+    public static final String DATABASE_CREATE= "CREATE TABLE "+TABLE_NAME+"("+KEY_ID+" INTEGER PRIMARY KEY AUTOINCREMENT , "
+            +KEY_MESSAGE+" TEXT);";
 
-    public static final String KEY_MESSAGE_TABLE = "Messages";
-    public static final String KEY_ID = "id";
-    public static final String KEY_MESSAGE = "msg";
-    public static final String TAG = "ChatDatabaseHelper";
+    public ChatDatabaseHelper(Context context) {
+        super(context, DATABASE_NAME, null, VERSION_NUM);
 
-    public ChatDatabaseHelper(Context ctx) {
-        super(ctx, DATABASE_NAME, null, VERSION_NUM);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        Log.i(TAG, "Calling onCreate");
-        db.execSQL("CREATE TABLE " + KEY_MESSAGE_TABLE + " (" +
-                KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                KEY_MESSAGE + " text not null);");
+        db.execSQL(DATABASE_CREATE);
+        Log.i("ChatDatabaseHelper","Calling onCreate");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        Log.i(TAG, "Calling onUpgrade, oldVersion=" + oldVersion + " newVersion=" + newVersion);
-        db.execSQL("DROP TABLE IF EXISTS " + DATABASE_NAME + ";");
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
         onCreate(db);
+        Log.i("ChatDatabaseHelper","Calling onUpgrade,oldVersion"+oldVersion+"newVersion="+newVersion);
     }
 }
