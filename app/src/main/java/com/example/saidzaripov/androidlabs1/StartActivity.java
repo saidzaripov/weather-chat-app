@@ -14,6 +14,7 @@ public class StartActivity extends Activity {
     private Button button;
     private Button chatButton;
     private Button weatherButton;
+    private Button testToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,13 @@ public class StartActivity extends Activity {
             Log.i(ACTIVITY_NAME, "User clicked Weather button");
             Intent weatherIntent = new Intent(StartActivity.this, WeatherForecast.class);
             startActivity(weatherIntent);
+        }));
+
+        testToolbar = findViewById(R.id.lab8_toolbar);
+        testToolbar.setOnClickListener((v ->{
+            Log.i(ACTIVITY_NAME, "User clicked Toolbar button");
+            Intent toolbarIntent = new Intent(StartActivity.this,TestToolbar.class);
+            startActivity(toolbarIntent);
         }));
     }
 

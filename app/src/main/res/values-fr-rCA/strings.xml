@@ -24,4 +24,17 @@
     <string name="min_temp">Le minimum:</string>
     <string name="max_temp">Maximum:</string>
     <string name="weather_forecast"> Météorologiques</string>
+    <string name = "title_activity_test_toolbar"> TestToolbar </string>
+    <string name = "test_Toolbar"> Barre d'outils de test </string>
+    <string name = "toolbar_one"> Un </string>
+    <string name = "toolbar_two"> Deux </string>
+    <string name = "toolbar_three"> Trois </string>
+    <string name = "toolbar_four"> À propos de </string>
+    <string name = "version_info"> Version 1.0, par Said Zaripov </string>
+    <string name = "toolbar_dialog"> Nouveau message </string>
+    <string name = "snackbarMessage"> Vous avez sélectionné l'élément 1. </string>
+    <string name = "toolbarDialogMessage"> Voulez-vous revenir en arrière? </string>
+
+
+
 </resources>
