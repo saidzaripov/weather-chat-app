@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".StartActivity">
 
     <TextView
@@ -17,28 +16,32 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:backgroundTint="@color/colorPrimary"
         android:text="@string/ButtonText" />
 
     <Button
-        android:id="@+id/chat_button"
+        android:id="@+id/startButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ChatButtonText" />
+        android:background="@color/colorAccent"
+        android:text="@string/StartButton" />
 
     <Button
-        android:id="@+id/weather_button"
+        android:id="@+id/weatherButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/weather_forecast"/>
-
-
-
-
-
-
-
+        android:background="@color/colorPrimary"
+        android:text="Start Weather" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/test_toolbar_btn"
+        android:text="Test Toolbar"
+        android:background="@color/colorAccent"
+        />
 
 </LinearLayout>

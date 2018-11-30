@@ -4,43 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/tabletchatwindow"
     tools:context=".ChatWindow">
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_above="@id/sendButton"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="false"
-        android:layout_marginBottom="16dp"
-        android:layout_alignParentStart="true" />
 
-    <EditText
-        android:id="@+id/editText3"
-        android:inputType="text"
-        android:layout_toEndOf="@id/sendButton"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:hint="@string/TextField" />
+    <RelativeLayout
+        android:id="@+id/rlChatList"
+        android:layout_width="400dp"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/sendButton"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:text="@string/SendText"/>
+        <ListView
+            android:id="@+id/chatListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Chat"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="8dp"
+            android:text="AbhiAndroid" />
+
+        <EditText
+            android:id="@+id/Chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginRight="-2dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toStartOf="@+id/SendButton"
+            android:hint="message" />
+
+        <Button
+            android:id="@+id/SendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/chatListView"
+            android:layout_alignParentBottom="true"
+            android:focusable="false"
+            android:text="@string/SendButton" />
+    </RelativeLayout>
 
     <FrameLayout
+
+        android:id="@+id/FL"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fragmentHolder"
-        android:background="@color/colorPrimary"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/listView">
+        android:layout_toEndOf="@id/rlChatList">
+
     </FrameLayout>
+
 
 
 

@@ -1,8 +1,11 @@
 package com.example.saidzaripov.androidlabs1;
+
+
+
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MessageDetails extends Activity {
@@ -12,18 +15,20 @@ public class MessageDetails extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message_details);
 
-        Intent i = getIntent();
+        Bundle infoToPass = getIntent().getExtras();
 
-        MessageFragment mf = new MessageFragment();
-        Bundle fragmentArgs = new Bundle();
-        fragmentArgs.putLong("ID",   i.getLongExtra("ID", 99)   );
-        fragmentArgs.putString("message", i.getStringExtra("message")  );
-        fragmentArgs.putBoolean("phone", true);
-        mf.setArguments(fragmentArgs);
-
+        MessageFragment newFragment = new MessageFragment();
+        newFragment.iAmTablet = false;
+        newFragment.setArguments(infoToPass);
         FragmentManager fm = getFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.empty_frame, mf);
-        ft.commit();
+        FragmentTransaction ftrans = fm.beginTransaction();
+        ftrans.replace(R.id.fragment_location,newFragment);
+        ftrans.addToBackStack("this_doesnt_matter");
+        ftrans.commit();
+
+
+
+
     }
+
 }
