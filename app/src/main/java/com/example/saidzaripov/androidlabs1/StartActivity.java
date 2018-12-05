@@ -16,7 +16,7 @@ public class StartActivity extends Activity {
     private Button wthBtn;
     private Button testtoolbar;
 
-    protected static final String ACTIVITY_NAME = "StartActivity";
+    protected static final String ACTIVITY_NAME = "com.example.saidzaripov.androidlabs1.StartActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,7 @@ public class StartActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Log.i(ACTIVITY_NAME, "User clicked Weather Forecast");
-                Intent intent = new Intent(StartActivity.this,WeatherForeCast.class);
+                Intent intent = new Intent(StartActivity.this,WeatherForecast.class);
                 startActivity(intent);
             }
         });
@@ -69,7 +69,7 @@ public class StartActivity extends Activity {
 
     protected void onActivityResult(int requestCode, int responseCode, Intent data) {
         if (requestCode == 50 && responseCode == Activity.RESULT_OK) {
-            Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult");
+            Log.i(ACTIVITY_NAME, "Returned to com.example.saidzaripov.androidlabs1.StartActivity.onActivityResult");
             String messagePassed = data.getStringExtra("Response");
 
             Toast toast = Toast.makeText(getApplicationContext(), messagePassed, Toast.LENGTH_LONG);

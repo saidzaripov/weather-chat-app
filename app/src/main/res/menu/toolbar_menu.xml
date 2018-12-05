@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/action_one"
-        android:icon="@android:drawable/icons8_android_os64"
-        android:orderInCategory="101"
+
+    <item android:id="@+id/action_one"
         android:title="One"
+        android:icon="@drawable/choice1"
+        android:orderInCategory="1"
         app:showAsAction="always" />
 
-    <item
-        android:id="@+id/action_two"
-        android:icon="@android:drawable/icons8_europe_48"
-        android:orderInCategory="101"
-        android:title="two"
+    <item android:id="@+id/action_two"
+        android:title="Two"
+        android:icon="@drawable/choice2"
+        android:orderInCategory="2"
         app:showAsAction="always" />
 
-    <item
-        android:id="@+id/action_three"
-        android:icon="@android:drawable/icons8_santa_64"
-        android:orderInCategory="101"
-        android:title="three"
+    <item android:id="@+id/action_three"
+        android:title="Three"
+        android:icon="@drawable/choice3"
+        android:orderInCategory="3"
         app:showAsAction="always" />
-    <item
-        android:id="@+id/about_id"
+
+    <item android:id="@+id/aboutOption"
         android:title="About"
-        app:showAsAction="never"></item>
-
-
+        app:showAsAction="never" />
 
 </menu>

@@ -1,7 +1,5 @@
 package com.example.saidzaripov.androidlabs1;
 
-
-
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
